@@ -3,7 +3,7 @@
 ## Cette demo c'est juste pour tester les services de CRUD pour un client et pour un client </br>
 ## Les technologies :</br>
 ```
-[+] Spring boot ===> version 2.4.0
+[+] Spring boot ===> version 2.4.4
 [+] MySQL       ===> version 8
 [+] Swagger UI  ===> version 2.7.0
 ```
