@@ -1,6 +1,6 @@
 # :boom: Gestion_Buvette_Demo_Swagger :boom: :
 
-## Cette demo c'est juste pour tester les services de CRUD pour un client et pour un client </br>
+## Cette demo c'est juste pour tester les services de CRUD pour un client et pour un produit </br>
 ## Les technologies :</br>
 ```
 [+] Spring boot ===> version 2.4.4
