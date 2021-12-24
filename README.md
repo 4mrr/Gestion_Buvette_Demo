@@ -19,4 +19,8 @@ http://localhost:8090/swagger-ui.html
 http://localhost:8090/v2/api-docs
 ```
 
-### !!! Avant d'executer le project il faut d'abord executer XAMPP !!! 
+### [+] Avant d'executer le project il faut d'abord executer XAMPP !!! 
+```
+Activer MySQL
+Activer le serveur Apache
+```
