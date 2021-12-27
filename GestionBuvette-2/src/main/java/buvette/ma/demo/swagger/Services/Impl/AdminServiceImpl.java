@@ -31,16 +31,27 @@ public class AdminServiceImpl implements AdminServices {
 
 	@Override
 	public String ConnexionAdmin(String username, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		Admin admin = adminDAO.findByUsername(username);
+		if(admin != null) 
+		{
+			if(admin.getPassword().equals(password)) 
+			{
+				return "[+] Welcome ADMIN "+admin.getUsername()+" To UniRegal";
+			}
+			return "[!] The Password Of THE ADMIN "+admin.getUsername()+" is Incorrect";
+		}
+		return "[-] The ADMIN NOT FOUND !!";
 	}
+	
 
+	@SuppressWarnings("null")
 	@Override
 	public String AddClient(Client client) {
-		if(clientDAO.findById(client.getId()) == null ) 
+		Client client2 = clientDAO.findByUsername(client.getUsername());
+		if(client2 == null) 
 		{
-			clientDAO.save(client);
-			return "[+] Client "+ client.getUsername() + "Has been Added";
+			clientDAO.save(client2);
+			return "[+] Client "+ client2.getUsername() + "Has been Added";
 		}
 		return "[-] Client is already exist ";
 	}
@@ -48,7 +59,8 @@ public class AdminServiceImpl implements AdminServices {
 	@Transactional
 	@Override
 	public String DeleteClient(Client client) {
-		if(clientDAO.findById(client.getId()) != null ) 
+		Client client2 = clientDAO.findByUsername(client.getUsername());
+		if(client2!= null ) 
 		{
 		  clientDAO.delete(client);	
 		  return "[+] Client "+ client.getUsername() + "Has been Deleted";
@@ -58,7 +70,8 @@ public class AdminServiceImpl implements AdminServices {
 
 	@Override
 	public String UpdateClient(Client client) {
-		if(clientDAO.findById(client.getId()) != null ) 
+		Client client2 = clientDAO.findByUsername(client.getUsername());
+		if(client2 != null ) 
 		{
 		 Client newClient = new Client();
 		 newClient.setUsername(client.getUsername());
