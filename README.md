@@ -17,7 +17,7 @@ http://localhost:8090/swagger-ui.html
 ```
 ### [+] pour acceder a la documentation de l'application {json}  :</br>
 ```
-http://localhost:8090/v2/api-docs
+http://localhost:8090/v3/api-docs
 ```
 
 ### [+] Avant d'executer le project il faut d'abord executer XAMPP !!! 
